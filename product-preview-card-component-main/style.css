@@ -1,0 +1,126 @@
+:root{
+    --product-primary-color:hsl(158, 36%, 37%);
+    --product-secondary-color:hsl(30, 38%, 92%);
+    --product-primary-color-price:hsl(158, 68%, 26%);
+    --product--dark-blue-color:hsl(212, 21%, 14%);
+    --product--dark-blue-grayish-color:hsl(228, 12%, 48%);
+    --product-white-color:hsl(0, 0%, 100%);
+--fw-regular:500;
+--fw-bold:600;
+--font-monnt:'Montserrat' ,sans-serif;
+--font-fraun:"Fraunces", serif;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,body{
+ height:  100%;
+}
+a{
+    text-decoration-line: none;
+    color:var(--product--dark-blue-grayish-color);
+}
+body{
+    font-family: var(--font-monnt);
+    font-weight: var(--fw-regular);
+    color:var(--product--dark-blue-grayish-color);
+    background-color: var(--product-secondary-color);
+ font-size: 0.8rem;
+    display: grid;
+ line-height: 1.7;
+ padding:1rem;
+place-content: center;
+}
+picture,img{
+    display: block;
+     max-width: 100%;
+    
+}
+.product{
+background:var(--product-white-color);
+ border-radius: 0.8rem;
+overflow: hidden;
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+max-width: 600px;
+}
+.product-information{
+  padding: 2rem;
+display: grid;
+gap:1px
+}
+.product-title{
+    font-family:var(--font-fraun);
+    font-size: 2.3rem;
+    line-height: 1.1;
+    color:var(--product--dark-blue-color)
+}
+.product-category{
+   
+  letter-spacing: 5px;
+}
+.product-cost{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.product-cost-new{
+    font-family: var(--font-fraun);
+    font-size: 2rem;
+    
+    color: var(--product-primary-color-price);
+    font-weight: var(--fw-bold);
+}
+.product-button{
+    background-color: var(--product-primary-color);
+    color: var(--product-white-color);
+    font-weight: var(--fw-bold);
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.product-button::before{
+    content: "";
+    background-image: url("images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+@media (max-width:600px) {
+    
+    .product{
+        display:grid;
+    max-width: 400px;
+      grid-template-columns: auto;
+        overflow-y: auto;
+    }
+
+    .product-information {
+        padding: 2.5rem;
+   
+    gap: 10px;
+    }
+body{
+    padding: 8px 1rem
+    ;
+}
+     .product-title{
+        font-size: 2rem;
+     }
+}
+
